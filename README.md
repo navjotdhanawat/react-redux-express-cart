@@ -1,4 +1,4 @@
-# React Js POC
+# React Ecommerce add to cart with redux and express api
 
 Ecommerce add to cart functionality reactjs with router.
 
