@@ -1,5 +1,5 @@
 import axios from 'axios';
-const server_url = 'ttps://react-redux-material-cart.herokuapp.com';
+const server_url = 'https://react-redux-material-cart.herokuapp.com';
 
 class ItemApi {
     static getItems() {
