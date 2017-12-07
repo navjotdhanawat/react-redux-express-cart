@@ -63,7 +63,6 @@ class ProductsComponent extends React.Component {
             <Col xs={6} md={3} className="product-component">
                 <ProductComponent key={item._id} {...item} />
             </Col>
-
         ));
 
         const alert = this.props.items.message ? <AlertComponent message={this.props.items.message} /> : null;

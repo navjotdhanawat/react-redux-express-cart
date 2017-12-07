@@ -25,9 +25,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-import {GridList, GridTile} from 'material-ui/GridList';
+import { GridList, GridTile } from 'material-ui/GridList';
 import Toggle from 'material-ui/Toggle';
-
 
 
 class App extends React.Component {
@@ -72,7 +71,6 @@ class App extends React.Component {
                 </Switch>
               </div>
             </GridList>
-            
           </div>
         </Router>
       </MuiThemeProvider>

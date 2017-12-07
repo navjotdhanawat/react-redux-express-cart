@@ -42,5 +42,8 @@ $npm run dev
 
 #### Todos
 
- - Search functionality using debounce. --Done
  - Write Unit Test cases.
+
+#### Demo and Tutorial:
+
+[THENEXTFACT Tutorial: How to create shopping cart in react redux](http://www.thenextfact.com/?p=588&preview=true)
