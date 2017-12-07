@@ -17,9 +17,15 @@ Ecommerce add to cart functionality reactjs with router.
 
 #### Installation
 
-```sh
+```
 $ npm install
 $ npm start
+```
+
+#### Development with Live reloading
+
+```
+$npm run dev
 ```
 
 #### Todos
