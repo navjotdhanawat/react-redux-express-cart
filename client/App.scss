@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(48, 48, 48);
+}
+
 .search-input {
   margin: 15px;
   float: right;
@@ -93,7 +97,7 @@
 }
 
 .no-padding {
-  padding: 0px;
+  padding: 0px !important;
 }
 
 .searchProduct {
@@ -103,7 +107,6 @@
 
 .search-section {
   margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 .alert-section {

@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { List, ListItem } from 'material-ui/List';
+import ContentInbox from 'material-ui/svg-icons/content/inbox';
+import ActionGrade from 'material-ui/svg-icons/action/grade';
+import ContentSend from 'material-ui/svg-icons/content/send';
+import ContentDrafts from 'material-ui/svg-icons/content/drafts';
+import Divider from 'material-ui/Divider';
+import ActionInfo from 'material-ui/svg-icons/action/info';
 
 /**
  * @param  {} props
@@ -7,30 +14,21 @@ import { NavLink } from 'react-router-dom';
  */
 function SidebarComponent(props) {
     return (
-        <div className="col-sm-12 cat-title sidebar-section">
-            <section>
-                <h3>CATEGORIES</h3>
-                <ul className="main-categories">
-                    <li><h5>
-                    <NavLink to="/" activeClassName="active">
-                        FRESH ARRIVALS
-                    </NavLink>
-                    </h5></li>
-                    <li><h5><a  className="blacklink">AMUL</a></h5></li>
-                    <li><h5><a  className="blacklink">SPECIAL OFFERS</a></h5></li>
-                    <li><h5><a  className="blacklink">GROCERY & STAPLES</a></h5></li>
-                    <li><h5><a  className="blacklink">CHOCOLATES & DESSERTS</a></h5></li>
-                    <li><h5><a  className="blacklink">BEVERAGES</a></h5></li>
-                    <li><h5><a  className="blacklink">SNACKS</a></h5></li>
-                    <li><h5><a  className="blacklink">PICKLES, CHUTNEY & SAUCES</a></h5></li>
-                    <li><h5><a  className="blacklink">BABY CARE</a></h5></li>
-                    <li><h5><a  className="blacklink">NEW PRODUCTS</a></h5></li>
-                    <li><h5><a  className="blacklink">ORGANIC PRODUCTS</a></h5></li>
-                    <li><h5><a  className="blacklink">PERSONAL CARE</a></h5></li>
-                    <li><h5><a  className="blacklink">HOUSEHOLD SUPPLIES</a></h5></li>
-                </ul>
-            </section>
-        </div>
+        <section>
+            <List>
+                <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
+                <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
+                <ListItem primaryText="Sent mail" leftIcon={<ContentSend />} />
+                <ListItem primaryText="Drafts" leftIcon={<ContentDrafts />} />
+                <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
+            </List>
+            <List>
+                <ListItem primaryText="All mail" rightIcon={<ActionInfo />} />
+                <ListItem primaryText="Trash" rightIcon={<ActionInfo />} />
+                <ListItem primaryText="Spam" rightIcon={<ActionInfo />} />
+                <ListItem primaryText="Follow up" rightIcon={<ActionInfo />} />
+            </List>
+        </section>
     );
 }
 

@@ -1,3 +1,3 @@
 module.exports = {
-    url : 'mongodb://localhost/react'
+    url : 'mongodb://admin:admin@ds161164.mlab.com:61164/react'
 }

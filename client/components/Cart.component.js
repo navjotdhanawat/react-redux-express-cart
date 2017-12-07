@@ -11,7 +11,7 @@ class CartComponent extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="cart-section">
                 <div className="head-price">
                     <h3 className="whitetext">
                         <strong>{this.props.getCart.items ? 'Rs '+ this.props.getCart.total : '0 in cart'}</strong>

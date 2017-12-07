@@ -561,7 +561,7 @@
     border: none;
 }
 
-.sidebar-section section {
+section {
     margin-top: 50px;
 }
 
@@ -638,4 +638,31 @@ header a.active {
 div.account-details > .top-search-product{
     border:1px solid #cecece;
     border-radius:0;
+}
+
+.cart-section {
+    width: 200px;
+    padding: 10px;
+}
+
+.product-component {
+    margin-bottom: 10px;
+    img {
+        height: 216px;
+    }
+}
+
+.mrp {
+    text-decoration: line-through;
+}
+
+span {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.cart-btn {
+    text-align: right;
 }

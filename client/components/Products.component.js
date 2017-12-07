@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 var Spinner = require('react-spinkit');
 import AlertComponent from './Alert.component';
+import { TextField, Paper } from 'material-ui';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class ProductsComponent extends React.Component {
     constructor(props) {
@@ -57,7 +59,10 @@ class ProductsComponent extends React.Component {
     render() {
 
         const items = this.props.items.docs.map((item, i) => (
-            <ProductComponent key={item._id} {...item} />
+            <Col xs={6} md={3} className="product-component">
+                <ProductComponent key={item._id} {...item} />
+            </Col>
+
         ));
 
         const alert = this.props.items.message ? <AlertComponent message={this.props.items.message} /> : null;
@@ -66,31 +71,22 @@ class ProductsComponent extends React.Component {
         </div> : null;
 
         return (
-            <div className="col-sm-12 latest-products">
-                <div className="col-sm-12 search-section">
-                    <div className="col-sm-12 col-md-12 no-padding search-bar">
-                        <div className="account-details">
-                            <input onChange={this.handleChange} name="searchProduct" type="text" className="searchProduct top-search-product form-control" id="searchProduct" placeholder="Search" />
-                            <a href="#">
-                                <img src={require('../images/search_button.png')} className="search-button img-responsive" border="0" />
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-sm-12 col-md-12">
-                        <h3 className="text-center">FRESH <strong>ARRIVALS</strong></h3>
-                    </div>
-                </div>
-                <ReactCSSTransitionGroup
-                    transitionName="example"
-                    transitionEnterTimeout={500}
-                    transitionLeaveTimeout={300}>
-                    <div className="item  col-xs-12 col-lg-12">
-                        {items}
-                    </div>
-                    {loading}
-                    {alert}
-                </ReactCSSTransitionGroup>
-            </div>
+            <section>
+                <Grid fluid>
+                    <Row>
+                        <Col xs={12} md={12} className="search-bar">
+                            <TextField onChange={this.handleChange} hintText="Search" fullWidth={true} />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={12} className="no-padding">
+                            <div>
+                                {items}
+                            </div>
+                        </Col>
+                    </Row>
+                </Grid>
+            </section>
         )
     }
 }

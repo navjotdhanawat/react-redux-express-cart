@@ -21,7 +21,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { connect } from 'react-redux';
 import { loadMoreItems, searchItems } from './actions';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import {GridList, GridTile} from 'material-ui/GridList';
 
 class App extends React.Component {
   constructor(props) {
@@ -31,25 +34,25 @@ class App extends React.Component {
   render() {
 
     return (
-      <Router>
-        <div className="">
-          <HeaderComponent />
-          <div className="container-fluid">
-            <section className="home-section">
-              <div className="col-sm-3">
+      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <Router>
+          <div className="">
+            <HeaderComponent />
+            <GridList cols={8}>
+              <div cols={2}>
                 <SidebarComponent />
               </div>
-              <div className="col-sm-9">
+              <div cols={6}>
                 <Switch>
                   <Route path="/" component={ProductsComponent} exact={true} />
                   <Route path="/product-details/:id" component={ProductDetailComponent} />
                 </Switch>
               </div>
-            </section>
+            </GridList>
+            
           </div>
-          <FooterComponent />
-        </div>
-      </Router>
+        </Router>
+      </MuiThemeProvider>
     );
   }
 }

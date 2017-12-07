@@ -39,50 +39,52 @@ class ProductDetailComponent extends React.Component {
         const price = this.props.detail.price;
 
         return (
-            <div className="col-sm-12">
-                <div className="card">
-                    <div className="container-fliud">
-                        <div className="wrapper row">
-                            <div className="preview col-md-6">
-                                <div className="preview-pic tab-content">
-                                    <div className="tab-pane active" id="pic-1"><img src={image} /></div>
-                                </div>
-                                <ul className="preview-thumbnail nav nav-tabs">
-                                    <li className="active"><a data-target="#pic-1" data-toggle="tab"><img src={image} /></a></li>
-                                    <li><a data-target="#pic-2" data-toggle="tab"><img src={image} /></a></li>
-                                    <li><a data-target="#pic-3" data-toggle="tab"><img src={image} /></a></li>
-                                    <li><a data-target="#pic-4" data-toggle="tab"><img src={image} /></a></li>
-                                    <li><a data-target="#pic-5" data-toggle="tab"><img src={image} /></a></li>
-                                </ul>
-                            </div>
-                            <div className="details col-md-6">
-                                <h3 className="product-title">{name}</h3>
-                                <div className="rating">
-                                    <div className="stars">
-                                        <span className="fa fa-star checked"></span>
-                                        <span className="fa fa-star checked"></span>
-                                        <span className="fa fa-star checked"></span>
-                                        <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
+            <section>
+                <div className="col-sm-12">
+                    <div className="card">
+                        <div className="container-fliud">
+                            <div className="wrapper row">
+                                <div className="preview col-md-6">
+                                    <div className="preview-pic tab-content">
+                                        <div className="tab-pane active" id="pic-1"><img src={image} /></div>
                                     </div>
-                                    <span className="review-no">41 reviews</span>
+                                    <ul className="preview-thumbnail nav nav-tabs">
+                                        <li className="active"><a data-target="#pic-1" data-toggle="tab"><img src={image} /></a></li>
+                                        <li><a data-target="#pic-2" data-toggle="tab"><img src={image} /></a></li>
+                                        <li><a data-target="#pic-3" data-toggle="tab"><img src={image} /></a></li>
+                                        <li><a data-target="#pic-4" data-toggle="tab"><img src={image} /></a></li>
+                                        <li><a data-target="#pic-5" data-toggle="tab"><img src={image} /></a></li>
+                                    </ul>
                                 </div>
-                                <p className="product-description">Product description will come here.</p>
-                                <h4 className="price">Price: <span>Rs. {price}</span></h4>
-                                <p className="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-                                <h5 className="sizes">sizes:
+                                <div className="details col-md-6">
+                                    <h3 className="product-title">{name}</h3>
+                                    <div className="rating">
+                                        <div className="stars">
+                                            <span className="fa fa-star checked"></span>
+                                            <span className="fa fa-star checked"></span>
+                                            <span className="fa fa-star checked"></span>
+                                            <span className="fa fa-star"></span>
+                                            <span className="fa fa-star"></span>
+                                        </div>
+                                        <span className="review-no">41 reviews</span>
+                                    </div>
+                                    <p className="product-description">Product description will come here.</p>
+                                    <h4 className="price">Price: <span>Rs. {price}</span></h4>
+                                    <p className="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+                                    <h5 className="sizes">sizes:
 							    <span className="size" data-toggle="tooltip" title="small">1 KG</span>
-                                </h5>
-                                <div className="action">
-                                    <div className="product-buynow">
-                                        <div className="pro-buynow"><a onClick={this.handleClick} className="whitelink"><div className={this.props.isInCart ? 'dangerbutton' : 'blackroundbutton'}>{this.props.isInCart ? 'Remove' : 'Add to cart'}</div></a></div>
+                                    </h5>
+                                    <div className="action">
+                                        <div className="product-buynow">
+                                            <div className="pro-buynow"><a onClick={this.handleClick} className="whitelink"><div className={this.props.isInCart ? 'dangerbutton' : 'blackroundbutton'}>{this.props.isInCart ? 'Remove' : 'Add to cart'}</div></a></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         )
     }
 }
