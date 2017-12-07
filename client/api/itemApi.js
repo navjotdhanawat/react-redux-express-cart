@@ -1,5 +1,5 @@
 import axios from 'axios';
-const server_url = 'http://localhost:4000';//"http://urkirana.progfeel.co.in";
+const server_url = 'ttps://react-redux-material-cart.herokuapp.com';
 
 class ItemApi {
     static getItems() {
