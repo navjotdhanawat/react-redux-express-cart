@@ -74,7 +74,7 @@ class ProductsComponent extends React.Component {
             <section>
                 <Grid fluid>
                     <Row>
-                        <Col xs={12} md={12} className="search-bar">
+                        <Col xs={12} md={6} className="search-bar">
                             <TextField onChange={this.handleChange} hintText="Search" fullWidth={true} />
                         </Col>
                     </Row>

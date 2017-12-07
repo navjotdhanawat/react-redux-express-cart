@@ -16,17 +16,16 @@ function SidebarComponent(props) {
     return (
         <section>
             <List>
-                <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
-                <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
-                <ListItem primaryText="Sent mail" leftIcon={<ContentSend />} />
-                <ListItem primaryText="Drafts" leftIcon={<ContentDrafts />} />
-                <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
+                <ListItem primaryText="SPECIAL OFFERS" leftIcon={<ContentInbox />} />
+                <ListItem primaryText="GROCERY & STAPLES" leftIcon={<ActionGrade />} />
+                <ListItem primaryText="CHOCOLATES & DESSERTS" leftIcon={<ContentSend />} />
+                <ListItem primaryText="BEVERAGES" leftIcon={<ContentDrafts />} />
+                <ListItem primaryText="SNACKS" leftIcon={<ContentInbox />} />
             </List>
             <List>
-                <ListItem primaryText="All mail" rightIcon={<ActionInfo />} />
-                <ListItem primaryText="Trash" rightIcon={<ActionInfo />} />
-                <ListItem primaryText="Spam" rightIcon={<ActionInfo />} />
-                <ListItem primaryText="Follow up" rightIcon={<ActionInfo />} />
+                <ListItem primaryText="My Account" rightIcon={<ActionInfo />} />
+                <ListItem primaryText="My Orders" rightIcon={<ActionInfo />} />
+                <ListItem primaryText="Contact Us" rightIcon={<ActionInfo />} />
             </List>
         </section>
     );

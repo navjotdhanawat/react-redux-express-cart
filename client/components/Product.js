@@ -49,13 +49,13 @@ class ProductComponent extends React.Component {
         const mrp = <span>MRP Rs<span className="mrp">{this.props.mrp ? this.props.mrp : ''}</span> <strong> {this.props.price}</strong></span>;
         return (
             <Card>
-                <CardMedia
-                    overlay={<CardTitle title={this.props.name} subtitle={mrp} />}
-                >
-                    <LazyLoad offset={80} placeholder={<PlaceholderComponent />} >
-                        <img className="group list-group-image" src={this.props.image} alt="" />
-                    </LazyLoad>
-                </CardMedia>
+                <NavLink to={'/product-details/' + this.props._id}>
+                    <CardMedia overlay={<CardTitle title={this.props.name} subtitle={mrp} />} >
+                        <LazyLoad offset={80} placeholder={<PlaceholderComponent />} >
+                            <img className="group list-group-image" src={this.props.image} alt="" />
+                        </LazyLoad>
+                    </CardMedia>
+                </NavLink>
                 <CardText>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Donec mattis pretium massa.
