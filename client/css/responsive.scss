@@ -562,7 +562,7 @@
 }
 
 section {
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 .home-section .latest-products {
@@ -658,7 +658,6 @@ div.account-details > .top-search-product{
 }
 
 span {
-    width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -666,4 +665,10 @@ span {
 }
 .cart-btn {
     text-align: right;
+}
+.product-section, .sidebar-section {
+    padding-top: 50px; 
+}
+.switch-theme {
+    padding: 20px;
 }

@@ -7,6 +7,7 @@ import ContentSend from 'material-ui/svg-icons/content/send';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
 import Divider from 'material-ui/Divider';
 import ActionInfo from 'material-ui/svg-icons/action/info';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 
 /**
  * @param  {} props
@@ -15,18 +16,20 @@ import ActionInfo from 'material-ui/svg-icons/action/info';
 function SidebarComponent(props) {
     return (
         <section>
-            <List>
-                <ListItem primaryText="SPECIAL OFFERS" leftIcon={<ContentInbox />} />
-                <ListItem primaryText="GROCERY & STAPLES" leftIcon={<ActionGrade />} />
-                <ListItem primaryText="CHOCOLATES & DESSERTS" leftIcon={<ContentSend />} />
-                <ListItem primaryText="BEVERAGES" leftIcon={<ContentDrafts />} />
-                <ListItem primaryText="SNACKS" leftIcon={<ContentInbox />} />
-            </List>
-            <List>
-                <ListItem primaryText="My Account" rightIcon={<ActionInfo />} />
-                <ListItem primaryText="My Orders" rightIcon={<ActionInfo />} />
-                <ListItem primaryText="Contact Us" rightIcon={<ActionInfo />} />
-            </List>
+            <Card className="sidebar-section">
+                <List>
+                    <ListItem primaryText="SPECIAL OFFERS" leftIcon={<ContentInbox />} />
+                    <ListItem primaryText="GROCERY & STAPLES" leftIcon={<ActionGrade />} />
+                    <ListItem primaryText="CHOCOLATES & DESSERTS" leftIcon={<ContentSend />} />
+                    <ListItem primaryText="BEVERAGES" leftIcon={<ContentDrafts />} />
+                    <ListItem primaryText="SNACKS" leftIcon={<ContentInbox />} />
+                </List>
+                <List>
+                    <ListItem primaryText="My Account" rightIcon={<ActionInfo />} />
+                    <ListItem primaryText="My Orders" rightIcon={<ActionInfo />} />
+                    <ListItem primaryText="Contact Us" rightIcon={<ActionInfo />} />
+                </List>
+            </Card>
         </section>
     );
 }

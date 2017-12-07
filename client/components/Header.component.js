@@ -9,7 +9,17 @@ import NavigationExpandMoreIcon from 'material-ui/svg-icons/navigation/expand-mo
 import MenuItem from 'material-ui/MenuItem';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import RaisedButton from 'material-ui/RaisedButton';
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import { Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle } from 'material-ui/Toolbar';
+import Toggle from 'material-ui/Toggle';
+
+
+const styles = {
+
+    toggle: {
+        marginBottom: 16,
+    }
+};
+
 
 // Header component
 class HeaderComponent extends React.Component {
@@ -26,7 +36,8 @@ class HeaderComponent extends React.Component {
 
         return (
             <Toolbar>
-                <ToolbarTitle className="whitetext" text="Ecommerce" />
+                <ToolbarTitle className="" text="Ecommerce" />
+                <Toggle className="switch-theme" onToggle={this.props.onClick} style={styles.toggle} />
                 <CartComponent />
             </Toolbar>
         );

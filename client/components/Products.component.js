@@ -10,6 +10,7 @@ var Spinner = require('react-spinkit');
 import AlertComponent from './Alert.component';
 import { TextField, Paper } from 'material-ui';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 
 class ProductsComponent extends React.Component {
     constructor(props) {
@@ -72,20 +73,22 @@ class ProductsComponent extends React.Component {
 
         return (
             <section>
-                <Grid fluid>
-                    <Row>
-                        <Col xs={12} md={6} className="search-bar">
-                            <TextField onChange={this.handleChange} hintText="Search" fullWidth={true} />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12} md={12} className="no-padding">
-                            <div>
-                                {items}
-                            </div>
-                        </Col>
-                    </Row>
-                </Grid>
+                <Card className="product-section">
+                    <Grid fluid>
+                        <Row>
+                            <Col xs={12} md={6} className="search-bar">
+                                <TextField onChange={this.handleChange} hintText="Search" fullWidth={true} />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={12} md={12} className="no-padding">
+                                <div>
+                                    {items}
+                                </div>
+                            </Col>
+                        </Row>
+                    </Grid>
+                </Card>
             </section>
         )
     }

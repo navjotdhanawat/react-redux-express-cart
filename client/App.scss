@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-body {
-  background-color: rgb(48, 48, 48);
-}
 
 .search-input {
   margin: 15px;
@@ -288,4 +285,17 @@ img {
 
 .blacklink.active {
     color: #03A9F4;
+}
+
+.cart-view {
+  position: fixed;
+  height: 100px;
+  width: 200px;
+  right: 5px;
+  z-index: 9;
+}
+
+.cart-view button {
+  height: 100px !important;
+  width: 200px !important;
 }

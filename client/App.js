@@ -24,20 +24,43 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import {GridList, GridTile} from 'material-ui/GridList';
+import Toggle from 'material-ui/Toggle';
+
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      theme: darkBaseTheme
+    }
+    this.toggle = 1;
+    this.toggleTheme = this.toggleTheme.bind(this);
+  }
+
+  toggleTheme() {
+    if (this.toggle) {
+      this.toggle = 0;
+      this.setState({
+        theme: lightBaseTheme
+      });
+    } else {
+      this.toggle = 1;
+      this.setState({
+        theme: darkBaseTheme
+      });
+    }
   }
 
   render() {
 
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+      <MuiThemeProvider muiTheme={getMuiTheme(this.state.theme)}>
         <Router>
-          <div className="">
-            <HeaderComponent />
+          <div className="body">
+            <HeaderComponent onClick={this.toggleTheme} />
             <GridList cols={8}>
               <div cols={2}>
                 <SidebarComponent />
