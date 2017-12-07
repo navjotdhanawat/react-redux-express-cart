@@ -23,6 +23,9 @@ Ecommerce add to cart functionality reactjs with router.
 
 ![React Redux Cart Screenshot](https://github.com/navjotdhanawat/react-redux-express-cart/blob/master/client/images/react-redux-cart-3.png?raw=true "React Redux Cart Screenshot")
 
+![React Redux Cart Screenshot](https://github.com/navjotdhanawat/react-redux-express-cart/blob/master/client/images/react-redux-cart-4.png?raw=true "React Redux Cart Screenshot")
+
+![React Redux Cart Screenshot](https://github.com/navjotdhanawat/react-redux-express-cart/blob/master/client/images/react-redux-cart-5.png?raw=true "React Redux Cart Screenshot")
 
 #### Installation
 
